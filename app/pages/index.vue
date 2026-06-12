@@ -1,55 +1,43 @@
 <template>
   <main>
-     <UiButton text="Get Started" class="text-white" />
+    <HomeHero v-gsap="'fade-in'" />
+    <HomeFeatures />
+    <HomeWhyUs v-gsap="'fade-up'" />
+    <HomeCta v-gsap="'fade-up'" />
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted } from 'vue'
 
-
-const {  $ScrollSmoother } :any= useNuxtApp()
-
-
-
-
-
-// contact us
-const form = ref({
-  name: '',
-  email: '',
-  message: ''
+useSeoMeta({
+  title: 'TrendPulse — Stay Ahead. Stay Informed. Stay Safe.',
+  description: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. TrendPulse helps you stay connected to what matters around you.',
+  ogTitle: 'TrendPulse — Real-time Community Safety Alerts & Tracking',
+  ogDescription: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. TrendPulse helps you stay connected to what matters around you, instantly.',
+  ogImage: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop',
+  twitterCard: 'summary_large_image',
 })
 
+const { $ScrollSmoother } : any = useNuxtApp()
 
-
-
-
-
-onMounted(async () => {
-  let existingSmoother = $ScrollSmoother.get();
-  if (existingSmoother) existingSmoother.kill();
- 
-  let smother = $ScrollSmoother.create({
-    wrapper:"#smooth-wrapper",
-    content:"#smooth-content",
-    smooth: 1.5, // slightly longer smoothing on desktop for premium feel
-    effects: true, 
-    smoothTouch: false, // native scroll on mobile is significantly faster and less laggy
-    normalizeScroll: true, // helps prevent mobile browser bar show/hide jumping
-    ignoreMobileResize: true,
-  });
+onMounted(() => {
+  if (import.meta.client && $ScrollSmoother) {
+    let existingSmoother = $ScrollSmoother.get()
+    if (existingSmoother) existingSmoother.kill()
+   
+    $ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.5,
+      effects: true, 
+      smoothTouch: false,
+      normalizeScroll: true,
+      ignoreMobileResize: true,
+    })
+  }
 })
-
-onUnmounted(() => {
-})
-
-
-
 </script>
 
 <style scoped>
-.italic {
-  font-style: italic;
-}
 </style>

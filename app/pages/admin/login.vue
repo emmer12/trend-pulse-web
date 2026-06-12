@@ -115,7 +115,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import heroImage from '~/assets/images/Sir Franklyn.png'
+const heroImage = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop'
 
 definePageMeta({
   layout: false

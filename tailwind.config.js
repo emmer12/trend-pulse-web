@@ -7,14 +7,15 @@ export default {
         primary_hover: "#033324",
         surface: "#F7F7F7",
         secondary: "#F1650D",
-        secondary_hover: "#045da1",
+        secondary_hover: "#d95707",
         light_gray: "#717171",
         black: "#1C1C1C",
+        warm_bg: "#FCFAF6", // clean, warm beige background like oja.com.ng
       },
-    },
-
-    fontFamily: {
-      inter: ["Inter", "Helvetica", "Arial", "sans-serif"],
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "Inter", "Helvetica", "Arial", "sans-serif"],
+        serif: ["Instrument Serif", "Georgia", "serif"],
+      },
     },
   },
 
