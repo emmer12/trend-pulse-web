@@ -1,6 +1,6 @@
 <template>
   <!-- Sticky header container with dynamic scroll backgrounds -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b"
+  <header ref="headerRef" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b"
           :class="isScrolled ? 'bg-white/80 backdrop-blur-md py-4 border-[#085E40]/10' : 'bg-transparent py-6 border-transparent'">
     <div class="container-x flex items-center justify-between">
       
@@ -42,12 +42,21 @@
 
     <!-- Mobile Drawer Overlay Backdrop -->
     <transition name="fade">
-      <div v-if="isOpen" class="fixed inset-0 top-[73px] bg-black/20 backdrop-blur-sm z-40 md:hidden" @click="isOpen = false"></div>
+      <div
+        v-if="isOpen"
+        class="fixed inset-x-0 bottom-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+        :style="{ top: headerHeight + 'px' }"
+        @click="isOpen = false"
+      ></div>
     </transition>
 
     <!-- Slide-Out Mobile Navigation Panel -->
     <transition name="slide">
-      <div v-if="isOpen" class="fixed top-[73px] right-0 bottom-0 w-[280px] bg-white shadow-2xl z-50 md:hidden flex flex-col p-6 border-l border-gray-100">
+      <div
+        v-if="isOpen"
+        class="fixed right-0 bottom-0 w-[280px] h-[calc(100vh-73px)] bg-white shadow-2xl z-50 md:hidden flex flex-col p-6 border-l border-gray-100"
+        :style="{ top: headerHeight + 'px' }"
+      >
         <nav class="flex flex-col gap-6 font-semibold text-base text-[#344054] mb-8">
           <a href="/#features" @click="handleNavClick($event, '#features')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Features</a>
           <a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Why SentraPulse</a>
@@ -67,15 +76,26 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const isOpen = ref(false)
 const isScrolled = ref(false)
+const headerRef = ref<HTMLElement | null>(null)
+const headerHeight = ref(73) // sensible default, updated dynamically
 const route = useRoute()
 
-// Track page scroll to apply background shift
+// Measure the actual rendered header height and keep it in sync
+const updateHeaderHeight = () => {
+  if (headerRef.value) {
+    headerHeight.value = headerRef.value.getBoundingClientRect().height
+  }
+}
+
+// Track page scroll to apply background shift and remeasure header
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
+  // Height changes when py class switches, so re-measure after transition
+  nextTick(updateHeaderHeight)
 }
 
 // Custom anchor links click handler to bypass default jump and scroll smoothly
@@ -106,11 +126,14 @@ const handleNavClick = (e: Event, selector: string) => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('resize', updateHeaderHeight)
   handleScroll()
+  nextTick(updateHeaderHeight)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', updateHeaderHeight)
 })
 </script>
 
