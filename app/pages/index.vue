@@ -11,10 +11,10 @@
 import { onMounted } from 'vue'
 
 useSeoMeta({
-  title: 'TrendPulse — Stay Ahead. Stay Informed. Stay Safe.',
-  description: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. TrendPulse helps you stay connected to what matters around you.',
-  ogTitle: 'TrendPulse — Real-time Community Safety Alerts & Tracking',
-  ogDescription: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. TrendPulse helps you stay connected to what matters around you, instantly.',
+  title: 'SentraPulse — Stay Ahead. Stay Informed. Stay Safe.',
+  description: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. SentraPulse helps you stay connected to what matters around you.',
+  ogTitle: 'SentraPulse — Real-time Community Safety Alerts & Tracking',
+  ogDescription: 'Real-time community alerts, safety updates, and live incident tracking—all in one place. SentraPulse helps you stay connected to what matters around you, instantly.',
   ogImage: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop',
   twitterCard: 'summary_large_image',
 })

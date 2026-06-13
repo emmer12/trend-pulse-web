@@ -8,7 +8,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           <div class="lg:col-span-7 flex flex-col items-start gap-5">
             <span class="text-xs font-bold uppercase tracking-widest text-secondary bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full">
-              ◆ JOIN TRENDPULSE TODAY
+              ◆ JOIN SENTRAPULSE TODAY
             </span>
             
             <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-white leading-tight">

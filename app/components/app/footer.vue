@@ -7,10 +7,10 @@
         <div class="col-span-1 md:col-span-5 flex flex-col gap-4">
           <NuxtLink to="/" class="flex items-center gap-2 group">
             <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-xl shadow-md transition-transform group-hover:scale-105">
-              T
+              S
             </div>
             <span class="font-sans font-extrabold text-xl tracking-tight text-white flex items-center gap-1">
-              Trend<span class="text-primary">Pulse</span>
+              Sentra<span class="text-primary">Pulse</span>
               <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
             </span>
           </NuxtLink>
@@ -31,7 +31,7 @@
           </h4>
           <ul class="flex flex-col gap-3 text-sm">
             <li><a href="/#features" @click="handleNavClick($event, '#features')" class="hover:text-white transition-colors">Features</a></li>
-            <li><a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-white transition-colors">Why TrendPulse</a></li>
+            <li><a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-white transition-colors">Why SentraPulse</a></li>
             <li><a href="/#cta-section" @click="handleNavClick($event, '#cta-section')" class="hover:text-white transition-colors">Download App</a></li>
           </ul>
         </div>
@@ -60,7 +60,7 @@
 
       <!-- Copyright Details & Regulatory Policy Links -->
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#AEB9C1]/50">
-        <p>&copy; {{ new Date().getFullYear() }} TrendPulse. All rights reserved.</p>
+        <p>&copy; {{ new Date().getFullYear() }} SentraPulse. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-white transition-colors">Terms of Service</a>

@@ -42,7 +42,7 @@
           </p>
 
           <p class="font-sans text-sm md:text-base text-light_gray mb-8 max-w-lg leading-relaxed">
-            TrendPulse helps you stay connected to what matters around you, instantly. Receive verified updates and make an impact on community awareness.
+            SentraPulse helps you stay connected to what matters around you, instantly. Receive verified updates and make an impact on community awareness.
           </p>
 
           <!-- Action Buttons -->
@@ -154,7 +154,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-2.5 w-2.5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
                     </svg>
-                    <span class="font-bold text-gray-700">trendpulse.app/lagos</span>
+                    <span class="font-bold text-gray-700">sentrapulse.com/lagos</span>
                   </div>
                   <span class="text-[8px] text-gray-400">↻</span>
                 </div>

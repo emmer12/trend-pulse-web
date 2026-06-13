@@ -8,7 +8,7 @@
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 inline-block">◆ WHY CHOOSE US</span>
         <h2 class="font-serif text-4xl sm:text-5xl text-black mb-4 leading-tight">
-          Why <span class="italic text-primary">TrendPulse</span>
+          Why <span class="italic text-primary">SentraPulse</span>
         </h2>
         <p class="font-sans text-sm sm:text-base text-light_gray">
           A secure, fast, and transparent platform that empowers communities to communicate safety issues, coordinate, and stay protected.

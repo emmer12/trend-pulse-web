@@ -7,10 +7,10 @@
       <!-- Brand Logo / Identity Link -->
       <NuxtLink to="/" class="flex items-center gap-2 group">
         <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-xl shadow-md shadow-primary/20 transition-transform group-hover:scale-105">
-          T
+          S
         </div>
         <span class="font-sans font-extrabold text-xl tracking-tight text-black flex items-center gap-1">
-          Trend<span class="text-primary">Pulse</span>
+          Sentra<span class="text-primary">Pulse</span>
           <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
         </span>
       </NuxtLink>
@@ -18,7 +18,7 @@
       <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-[#344054]">
         <a href="/#features" @click="handleNavClick($event, '#features')" class="hover:text-primary transition-colors">Features</a>
-        <a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-primary transition-colors">Why TrendPulse</a>
+        <a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-primary transition-colors">Why SentraPulse</a>
         <a href="/#cta-section" @click="handleNavClick($event, '#cta-section')" class="hover:text-primary transition-colors">Download</a>
       </nav>
 
@@ -50,7 +50,7 @@
       <div v-if="isOpen" class="fixed top-[73px] right-0 bottom-0 w-[280px] bg-white shadow-2xl z-50 md:hidden flex flex-col p-6 border-l border-gray-100">
         <nav class="flex flex-col gap-6 font-semibold text-base text-[#344054] mb-8">
           <a href="/#features" @click="handleNavClick($event, '#features')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Features</a>
-          <a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Why TrendPulse</a>
+          <a href="/#why-us" @click="handleNavClick($event, '#why-us')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Why SentraPulse</a>
           <a href="/#cta-section" @click="handleNavClick($event, '#cta-section')" class="hover:text-primary transition-colors py-2 border-b border-gray-50">Download</a>
         </nav>
         <div class="flex flex-col gap-4 mt-auto">
