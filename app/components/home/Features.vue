@@ -119,7 +119,7 @@
           <div class="lg:col-span-7 order-2 lg:order-1 w-full flex justify-center" v-gsap="'fade-right'">
             <div class="bg-[#053D2A] border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl max-w-xl w-full flex flex-col gap-6">
               
-              <div class="flex justify-between items-start">
+              <!-- <div class="flex justify-between items-start">
                 <div class="flex flex-col gap-1">
                   <span class="text-[10px] text-secondary font-bold tracking-widest uppercase">▲ LIVE CAMPAIGN TRACKER</span>
                   <h3 class="text-xl font-bold text-white leading-tight">East District Neighborhood Lighting Initiative</h3>
@@ -127,7 +127,7 @@
                 <span class="px-2.5 py-1 bg-white/10 text-white rounded-full text-xs font-medium border border-white/5">
                   ID: #4819
                 </span>
-              </div>
+              </div> -->
 
               <!-- Signature Goal Meter (Now Interactive!) -->
               <div class="bg-[#03291C] rounded-2xl p-5 border border-white/5 flex flex-col gap-4">
